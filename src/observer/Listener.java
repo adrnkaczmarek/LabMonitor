@@ -1,38 +1,58 @@
 package observer;
 
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.*;
+import library.Conversions;
+
+import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
 public class Listener extends Thread {
 
-    int port;
-    ServerSocket server;
-    Socket socket;
+    private ServerSocket server;
+    private Socket socket;
 
     public Listener( int port_number ){
-        this.port = port_number;
+    	try {
+			this.server = new ServerSocket(port_number);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
     }
+    
+    
+    private DataInputStream initInput(){
+    	InputStream input_socket = null;
+    	BufferedInputStream input_buffer = null;
+		try {
+			input_socket = this.socket.getInputStream();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		input_buffer = new BufferedInputStream( input_socket );
+		return new DataInputStream ( input_buffer );
+	}
 
-        @Override
+    @Override
     public void run() {
-        try {
-            DataInputStream in;
-            InputStream in_sock;
-            BufferedInputStream in_buf;
-            int length;
-            byte[] a;
-            BufferedImage img;
-
-            server = new ServerSocket(port);
-            socket = server.accept();
-            in_sock = socket.getInputStream();
-            in_buf = new BufferedInputStream(in_sock);
-            in = new DataInputStream(in_buf);
+      
+        DataInputStream inputStream = null;
+        int length;
+        BufferedImage img;
+		try {
+            this.socket = this.server.accept();
+            inputStream = this.initInput();
 
             JFrame frame = new JFrame("Lab Monitor");
             JLabel label = new JLabel();
@@ -41,16 +61,20 @@ public class Listener extends Thread {
             frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-            while ((length=in.readInt())!=-1){
-                a = new byte[length];
-                System.out.println(length);
-                in.readFully(a, 0, length);
-                img = ImageIO.read(new ByteArrayInputStream(a));
-                label.setIcon(new ImageIcon(img));
+            while ((length=inputStream.readInt())!=-1){
+                label.setIcon(new ImageIcon(Conversions.byteArrayToImage(length, inputStream)));
             }
-            socket.close();
-            server.close();
-        } catch (Exception e) {
+        }
+		catch(IOException ioExc){
+			try {
+				socket.close();
+				server.close();
+				inputStream.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		catch (Exception e) {
             e.printStackTrace();
         }
     }

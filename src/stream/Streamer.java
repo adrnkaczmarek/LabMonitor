@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.net.SocketException;
@@ -26,16 +27,19 @@ public class Streamer {
 		this.port = portNmb;
 	}
 	
+	
+	
 	public void startTimer(){
     	timer = new Timer();
         SendImageTask task = new SendImageTask( hostName, port );
-        timer.schedule( task, 0, 50);
+        timer.schedule( task, 0, 250);
     }
+	
     
     class SendImageTask extends TimerTask{
+    	
     	private Socket refSock;
-    	String name;
-    	int port;
+    	private DataOutputStream output;    	
     	
     	protected SendImageTask( String name, int port ){
     		try {
@@ -43,32 +47,48 @@ public class Streamer {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+    		this.output = this.initOutput();
     	}
+    	
+    	
+    	
+    	public DataOutputStream getOutput(){
+    		return this.output;
+    	}
+    	
+    	private DataOutputStream initOutput(){
+			OutputStream output_socket = null;
+			BufferedOutputStream output_buffer = null;
+			try {
+				output_socket = this.refSock.getOutputStream();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			output_buffer = new BufferedOutputStream( output_socket );
+			return new DataOutputStream ( output_buffer );
+		}
     	
 		@Override
 		public void run() {
+			
+			DataOutputStream outputLocal = null;
 			try{
-				DataOutputStream out;
-				OutputStream out_sock;
-				BufferedOutputStream out_buf;
-				out_sock = this.refSock.getOutputStream();
-				out_buf = new BufferedOutputStream( out_sock );
-				out = new DataOutputStream ( out_buf );
-				Rectangle shot = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
+				outputLocal = this.getOutput();
+				Rectangle snapShot = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
 				
 				BufferedImage buffimg = (new Robot())
-		           		.createScreenCapture(shot);
-				ByteArrayOutputStream baos = new ByteArrayOutputStream();		             
-				ImageIO.write(buffimg, "jpg", baos);
-				byte[] a = baos.toByteArray();
-				out.writeInt(a.length);
-				out.write( a );
-				System.out.println("Wys³ano");	
+		           		.createScreenCapture(snapShot);
+				ByteArrayOutputStream arrayOutput = new ByteArrayOutputStream();		             
+				ImageIO.write(buffimg, "jpg", arrayOutput);
+				byte[] a = arrayOutput.toByteArray();
+				outputLocal.writeInt(a.length);
+				outputLocal.write( a );
 			}
 			catch(SocketException se){
 				timer.cancel();
 				try {
 					refSock.close();
+					outputLocal.close();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
