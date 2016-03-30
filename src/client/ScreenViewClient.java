@@ -1,4 +1,4 @@
-package stream;
+package client;
 
 import java.awt.Rectangle;
 import java.awt.Robot;
@@ -10,7 +10,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
-import java.net.SocketException;
 import java.util.Timer;
 import java.util.TimerTask;
 

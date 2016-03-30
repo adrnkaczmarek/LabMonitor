@@ -1,4 +1,4 @@
-package ProcessLib;
+package client;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
