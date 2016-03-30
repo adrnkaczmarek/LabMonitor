@@ -83,16 +83,12 @@ public class ScreenViewClient {
 				outputLocal.writeInt(a.length);
 				outputLocal.write( a );
 			}catch(Exception e){
-				e.printStackTrace();
-			}finally {
                 timer.cancel();
                 try {
-                    refSock.close();
                     outputLocal.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
+                    refSock.close();
+                } catch (Exception exc) {}
+			}
         }
     }
 }

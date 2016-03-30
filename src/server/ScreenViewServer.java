@@ -62,15 +62,12 @@ public class ScreenViewServer extends Thread {
                 label.setIcon(new ImageIcon(Conversions.byteArrayToImage(length, inputStream)));
             }
         }catch (Exception e) {
-            e.printStackTrace();
-        }
-        finally{
             try {
                 socket.close();
                 server.close();
                 inputStream.close();
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception exc) {
+                exc.printStackTrace();
             }
         }
     }
