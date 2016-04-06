@@ -147,8 +147,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -502,11 +502,13 @@
       <workItem from="1459290365657" duration="74000" />
       <workItem from="1459291076251" duration="401000" />
       <workItem from="1459330198779" duration="19000" />
+      <workItem from="1459967050558" duration="14000" />
+      <workItem from="1459970461296" duration="24000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37872000" />
+    <option name="totallyTimeSpent" value="37910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />

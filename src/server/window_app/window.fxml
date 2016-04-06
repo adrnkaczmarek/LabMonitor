@@ -1,0 +1,11 @@
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.geometry.Insets?>
+<ScrollPane fx:controller="server.window_app.Controller" xmlns:fx="http://javafx.com/fxml"
+            hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" fitToWidth="true">
+    <FlowPane alignment="center" hgap="20" vgap="45" fx:id="videoPanel">
+        <padding>
+            <Insets top="30" bottom="30" left="40" right="50"/>
+        </padding>
+    </FlowPane>
+</ScrollPane>

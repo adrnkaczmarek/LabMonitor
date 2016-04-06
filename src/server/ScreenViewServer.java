@@ -1,9 +1,8 @@
 package server;
 
 import library.Conversions;
+import server.window_app.OnAcceptInterface;
 
-import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -11,21 +10,19 @@ import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-
 public class ScreenViewServer extends Thread {
 
     private ServerSocket server;
     private Socket socket;
+    private OnAcceptInterface acceptEvent;
 
-    public ScreenViewServer(int port_number){
+    public ScreenViewServer(int port_number,OnAcceptInterface acceptEvent){
     	try {
 			this.server = new ServerSocket(port_number);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+        this.acceptEvent = acceptEvent;
     }
     
     
@@ -43,29 +40,20 @@ public class ScreenViewServer extends Thread {
 
     @Override
     public void run() {
-      
         DataInputStream inputStream = null;
         int length;
-        BufferedImage img;
 		try {
             this.socket = this.server.accept();
             inputStream = this.initInput();
 
-            JFrame frame = new JFrame("Lab Monitor");
-            JLabel label = new JLabel();
-            frame.setVisible(true);
-            frame.add(label);
-            frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
             while ((length=inputStream.readInt())!=-1){
-                label.setIcon(new ImageIcon(Conversions.byteArrayToImage(length, inputStream)));
+                acceptEvent.onReceive( Conversions.byteArrayToImage(length, inputStream) );
             }
         }catch (Exception e) {
+            e.printStackTrace();
             try {
                 socket.close();
                 server.close();
-                inputStream.close();
             } catch (Exception exc) {
                 exc.printStackTrace();
             }
