@@ -1,5 +1,6 @@
 package server.window_app;
 
+import discoverLib.DiscoverServer;
 import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
@@ -22,6 +23,8 @@ public class Controller implements Initializable, OnAcceptInterface
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        new Thread(new DiscoverServer()).start();
+
         ScreenViewServer listenImage = new ScreenViewServer(11937, this);
         new Thread(listenImage).start();
     }
