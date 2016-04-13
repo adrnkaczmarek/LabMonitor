@@ -1,0 +1,6 @@
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.image.ImageView?>
+<FlowPane fx:controller="server.window_app.selectedView.ViewController" xmlns:fx="http://javafx.com/fxml"
+          alignment="CENTER" fx:id="videoPanel">
+    <ImageView fx:id="stream"/>
+</FlowPane>
