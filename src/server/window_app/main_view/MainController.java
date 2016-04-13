@@ -33,8 +33,10 @@ public class MainController implements Initializable, OnAcceptInterface
     }
 
     @Override
-    public ImageView createView() {
+    public ImageView createView( BufferedImage img ) {
         final ImageView view = new ImageView();
+        final Image buffimg = SwingFXUtils.toFXImage(img, null);
+
         view.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -44,6 +46,7 @@ public class MainController implements Initializable, OnAcceptInterface
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
+                view.setImage(buffimg);
                 videoPanel.getChildren().add(view);
             }
         });
@@ -57,7 +60,6 @@ public class MainController implements Initializable, OnAcceptInterface
                 @Override
                 public void run() {
                     this.setImage(screenshot);
-                    System.out.println("aktualizacja obrazu");
                 }
             });
     }

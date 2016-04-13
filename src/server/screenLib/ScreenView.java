@@ -27,7 +27,9 @@ public class ScreenView extends Thread {
         int length;
         try {
             inputStream = this.initInput();
-            view = acceptEvent.createView();
+            length = inputStream.readInt();
+            view = acceptEvent.createView( Conversions.byteArrayToImage(length, inputStream) );
+
             while ((length=inputStream.readInt())!=-1){
                 acceptEvent.onReceive( Conversions.byteArrayToImage(length, inputStream) , view );
             }
