@@ -18,16 +18,24 @@ public class ProcessClient implements Runnable {
     public void run() {
         String osName = System.getProperty("os.name");
 
-        if(osName.startsWith("Windows")) {
-            try {
-                connectAndSend(Runtime.getRuntime().exec(System.getenv("windir") +"\\system32\\"+"tasklist.exe"));
-            } catch (IOException e) {
-                e.printStackTrace();
+        //tmp, poki nie bedzie komunikacji
+        while(true) {
+            if (osName.startsWith("Windows")) {
+                try {
+                    connectAndSend(Runtime.getRuntime().exec(System.getenv("windir") + "\\system32\\" + "tasklist.exe"));
+                } catch (IOException e) {
+                    //e.printStackTrace();
+                }
+            } else if (osName.startsWith("Linux")) {
+                try {
+                    connectAndSend(Runtime.getRuntime().exec("ps -e"));
+                } catch (IOException e) {
+                    //e.printStackTrace();
+                }
             }
-        } else if (osName.startsWith("Linux")) {
             try {
-                connectAndSend(Runtime.getRuntime().exec("ps -e"));
-            } catch (IOException e) {
+                Thread.sleep(6000);
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
@@ -43,7 +51,6 @@ public class ProcessClient implements Runnable {
 
             while ((line = reader.readLine()) != null) {
                 output.writeUTF(line);
-                System.out.println(line);
             }
 
             reader.close();

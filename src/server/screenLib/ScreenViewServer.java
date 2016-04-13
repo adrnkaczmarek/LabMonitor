@@ -11,9 +11,9 @@ public class ScreenViewServer extends Thread {
     private Socket socket;
     private OnAcceptInterface acceptEvent;
 
-    public ScreenViewServer(OnAcceptInterface acceptEvent){
+    public ScreenViewServer(int port, OnAcceptInterface acceptEvent){
     	try {
-			this.server = new ServerSocket(PORT);
+			this.server = new ServerSocket(port);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

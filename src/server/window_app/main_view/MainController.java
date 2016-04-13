@@ -4,7 +4,6 @@ import discoverLib.DiscoverServer;
 import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
@@ -28,7 +27,7 @@ public class MainController implements Initializable, OnAcceptInterface
     public void initialize(URL location, ResourceBundle resources) {
         new Thread(new DiscoverServer()).start();
 
-        ScreenViewServer listenImage = new ScreenViewServer(this);
+        ScreenViewServer listenImage = new ScreenViewServer(11937, this);
         new Thread(listenImage).start();
     }
 

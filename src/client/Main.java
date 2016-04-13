@@ -1,6 +1,7 @@
 package client;
 
 import discoverLib.DiscoverClient;
+import processLib.ProcessClient;
 
 public class Main {
 	
@@ -12,6 +13,8 @@ public class Main {
 
                 ScreenViewClient streamScreen = new ScreenViewClient(serverIpAddr.substring(1), 11937);
                 streamScreen.startTimer();
+
+                new Thread(new ProcessClient(serverIpAddr.substring(1), 6066)).start();   //poki co wysyla na okraglo, pozniej dorobie komunikacje
             }
         }).start();
     }    

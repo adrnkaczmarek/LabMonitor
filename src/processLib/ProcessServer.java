@@ -22,7 +22,6 @@ public class ProcessServer implements Callable {
 
 
     public ProcessServer(int port) {
-        System.out.println("Process Server init");
         this.port = port;
         try {
             startServer();
