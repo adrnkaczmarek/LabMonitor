@@ -1,6 +1,7 @@
 package client;
 
 import library.Conversions;
+import library.IOOperations;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -43,7 +44,7 @@ public class ScreenViewClient {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-    		this.output = this.initOutput();
+    		this.output = IOOperations.initOutput(refSock);
             width = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth()/4;
             height = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight()/4;
     	}
@@ -52,18 +53,6 @@ public class ScreenViewClient {
     	public DataOutputStream getOutput(){
     		return this.output;
     	}
-    	
-    	private DataOutputStream initOutput(){
-			OutputStream output_socket = null;
-			BufferedOutputStream output_buffer = null;
-			try {
-				output_socket = this.refSock.getOutputStream();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			output_buffer = new BufferedOutputStream( output_socket );
-			return new DataOutputStream ( output_buffer );
-		}
 
         private BufferedImage getScreenshot() throws AWTException{
             Rectangle snapShot = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());

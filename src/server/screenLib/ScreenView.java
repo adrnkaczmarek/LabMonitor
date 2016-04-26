@@ -2,6 +2,7 @@ package server.screenLib;
 
 import javafx.scene.image.ImageView;
 import library.Conversions;
+import library.IOOperations;
 
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
@@ -26,7 +27,7 @@ public class ScreenView extends Thread {
         DataInputStream inputStream = null;
         int length;
         try {
-            inputStream = this.initInput();
+            inputStream = IOOperations.initInput(socket);
             length = inputStream.readInt();
             view = acceptEvent.createView( Conversions.byteArrayToImage(length, inputStream) );
 
@@ -42,17 +43,4 @@ public class ScreenView extends Thread {
             }
         }
     }
-
-    private DataInputStream initInput(){
-        InputStream input_socket = null;
-        BufferedInputStream input_buffer = null;
-        try {
-            input_socket = this.socket.getInputStream();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        input_buffer = new BufferedInputStream( input_socket );
-        return new DataInputStream ( input_buffer );
-    }
-
 }
