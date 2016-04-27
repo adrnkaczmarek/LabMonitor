@@ -19,10 +19,10 @@ public class Screen {
         return tag;
     }
 
-    public static Dimension getScreenDimension(int divider){
+    public static Dimension getScreenDimension(double divider){
         Dimension toReturn = new Dimension();
-        int width = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth()/divider;
-        int height = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight()/divider;
+        double width =  Toolkit.getDefaultToolkit().getScreenSize().getWidth()/divider;
+        double height = Toolkit.getDefaultToolkit().getScreenSize().getHeight()/divider;
         toReturn.setSize( width, height);
 
         return toReturn;

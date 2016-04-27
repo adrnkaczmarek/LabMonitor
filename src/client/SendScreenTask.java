@@ -17,7 +17,7 @@ public class SendScreenTask extends TimerTask {
     private Dimension screenshotDimension;
     private Timer timer;
 
-    protected SendScreenTask(Socket socket, Timer timer, int imageSizeDivider){
+    protected SendScreenTask(Socket socket, Timer timer, double imageSizeDivider){
         refSock = socket;
         output = IOOperations.initOutput(refSock);
         screenshotDimension = Screen.getScreenDimension(imageSizeDivider);

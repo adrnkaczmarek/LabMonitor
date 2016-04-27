@@ -1,12 +1,13 @@
 package server.screenLib;
 
+import javafx.scene.image.ImageView;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ScreenViewServer extends Thread {
+public class ScreenViewServer implements Runnable {
 
-    private static final int PORT = 11937;
     private ServerSocket server;
     private Socket socket;
     private OnAcceptInterface acceptEvent;
@@ -34,7 +35,7 @@ public class ScreenViewServer extends Thread {
                     exc.printStackTrace();
                 }
             }
-            new ScreenView(this.socket, this.acceptEvent).start();
+            new ScreenView(this.socket, this.acceptEvent, new ImageView()).start();
         }
     }
 }

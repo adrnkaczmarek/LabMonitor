@@ -4,10 +4,7 @@ import javafx.scene.image.ImageView;
 import library.Conversions;
 import library.IOOperations;
 
-import java.io.BufferedInputStream;
 import java.io.DataInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.Socket;
 
 public class ScreenView extends Thread {
@@ -16,10 +13,10 @@ public class ScreenView extends Thread {
     private OnAcceptInterface acceptEvent;
     private ImageView view;
 
-    public ScreenView(Socket socket, OnAcceptInterface event){
+    public ScreenView(Socket socket, OnAcceptInterface event, ImageView image){
         this.socket = socket;
         this.acceptEvent = event;
-        view = new ImageView();
+        view = image;
     }
 
     @Override
@@ -29,7 +26,7 @@ public class ScreenView extends Thread {
         try {
             inputStream = IOOperations.initInput(socket);
             length = inputStream.readInt();
-            view = acceptEvent.createView( Conversions.byteArrayToImage(length, inputStream) );
+            view = acceptEvent.createView( Conversions.byteArrayToImage(length, inputStream), socket );
 
             while ((length=inputStream.readInt())!=-1){
                 acceptEvent.onReceive( Conversions.byteArrayToImage(length, inputStream) , view );

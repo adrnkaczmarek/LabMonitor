@@ -11,8 +11,9 @@ public class Main {
             public void run() {
                 String serverIpAddr = new DiscoverClient().getServerAddress();
 
-                ScreenViewClient streamScreen = new ScreenViewClient(serverIpAddr.substring(1), 11937);
-                streamScreen.startTimer();
+                (new ScreenViewClient(serverIpAddr.substring(1), 11937)).sendingSmallScreen();
+
+                (new ScreenViewClient(11938)).listenForMaximized();
 
                 new Thread(new ProcessClient(serverIpAddr.substring(1), 6066)).start();   //poki co wysyla na okraglo, pozniej dorobie komunikacje
             }

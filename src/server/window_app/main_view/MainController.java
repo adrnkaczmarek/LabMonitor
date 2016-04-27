@@ -15,6 +15,7 @@ import server.screenLib.ScreenViewServer;
 import server.window_app.selectedView.ViewStage;
 
 import java.awt.image.BufferedImage;
+import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -26,20 +27,18 @@ public class MainController implements Initializable, OnAcceptInterface
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         new Thread(new DiscoverServer()).start();
-
-        ScreenViewServer listenImage = new ScreenViewServer(11937, this);
-        new Thread(listenImage).start();
+        new Thread(new ScreenViewServer(11937, this)).start();
     }
 
     @Override
-    public ImageView createView( BufferedImage img ) {
+    public ImageView createView( BufferedImage img , Socket socket ) {
         final ImageView view = new ImageView();
         final Image buffimg = SwingFXUtils.toFXImage(img, null);
 
         view.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                new ViewStage();
+                new ViewStage( socket.getRemoteSocketAddress().toString(), socket.getPort() );
             }
         });
         Platform.runLater(new Runnable() {
