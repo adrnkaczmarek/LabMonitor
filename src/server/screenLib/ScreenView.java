@@ -35,6 +35,8 @@ public class ScreenView extends Thread {
             e.printStackTrace();
             try {
                 socket.close();
+                inputStream.close();
+                acceptEvent.deleteView(view);
             } catch (Exception exc) {
                 exc.printStackTrace();
             }

@@ -5,8 +5,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.net.Socket;
-
 public class ViewStage extends Stage {
 
     public ViewStage( String host, int port ){

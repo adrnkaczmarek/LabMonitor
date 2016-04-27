@@ -52,6 +52,16 @@ public class MainController implements Initializable, OnAcceptInterface
     }
 
     @Override
+    public void deleteView(ImageView view) {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                videoPanel.getChildren().remove(view);
+            }
+        });
+    }
+
+    @Override
     public void onReceive(BufferedImage img, ImageView view) {
         final Image screenshot = SwingFXUtils.toFXImage(img, null);
         Platform.runLater(new ChangeImage(view) {

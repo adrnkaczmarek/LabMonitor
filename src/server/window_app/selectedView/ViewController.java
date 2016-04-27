@@ -3,7 +3,6 @@ package server.window_app.selectedView;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingFXUtils;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
@@ -13,10 +12,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
-import library.Conversions;
-import library.IOOperations;
 import processLib.ProcessModel;
 import processLib.ProcessParse;
 import processLib.ProcessServer;
@@ -25,7 +21,6 @@ import server.screenLib.ScreenView;
 import server.window_app.main_view.ChangeImage;
 
 import java.awt.image.BufferedImage;
-import java.io.DataInputStream;
 import java.net.Socket;
 import java.net.URL;
 import java.util.List;
@@ -144,6 +139,11 @@ public class ViewController implements Initializable, OnAcceptInterface{
             }
         });
         return view;
+    }
+
+    @Override
+    public void deleteView(ImageView view) {
+
     }
 
     @Override
