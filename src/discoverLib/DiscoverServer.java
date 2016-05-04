@@ -13,12 +13,12 @@ public class DiscoverServer implements Runnable {
         try {
             InetAddress inetAddress = InetAddress.getByName(multicastAddress);
             try (DatagramSocket serverSocket = new DatagramSocket()) {
-                System.out.println("[DISCOVER SERVER] Socket created.");
+                //System.out.println("[DISCOVER SERVER] Socket created.");
                 String msg = "myDISCOVER";
                 while(true) {
                     DatagramPacket discoverPacket = new DatagramPacket(msg.getBytes(), msg.getBytes().length, inetAddress, port);
                     serverSocket.send(discoverPacket);
-                    System.out.println("[DISCOVER SERVER] Message sent. Size = " + discoverPacket.getLength());
+                    //System.out.println("[DISCOVER SERVER] Message sent. Size = " + discoverPacket.getLength());
                     Thread.sleep(5000);
                 }
             } catch (SocketException e) {

@@ -1,9 +1,11 @@
 package server.window_app.selectedView;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class ViewStage extends Stage {
 
@@ -21,5 +23,15 @@ public class ViewStage extends Stage {
 
         ViewController controller = fxmlLoader.<ViewController>getController();
         controller.setupRemoteHostConnection(host, port);
+        controller.setupProcessTable(host);
+
+        this.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                controller.stopServer();
+            }
+        });
     }
+
+
 }

@@ -13,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import procManageLib.ManageServer;
 import processLib.ProcessModel;
 import processLib.ProcessParse;
 import processLib.ProcessServer;
@@ -55,7 +56,6 @@ public class ViewController implements Initializable, OnAcceptInterface{
         gridPane.add(testKuba, 1, 0);
         //=======================================================
 
-        setupProcessTable();
     }
 
 
@@ -71,7 +71,7 @@ public class ViewController implements Initializable, OnAcceptInterface{
         }
     }
 
-    private void setupProcessTable() {
+    public void setupProcessTable(String clientIpAddr) {
         table.setEditable(true);
 
         TableColumn processName = new TableColumn("Process");
@@ -87,15 +87,15 @@ public class ViewController implements Initializable, OnAcceptInterface{
         table.setItems(data);
 
         gridPane.add(table, 1, 1);
-        listenForProcesses();
+        listenForProcesses(clientIpAddr);
     }
 
-    private void listenForProcesses() {
+    private void listenForProcesses(String clientIpAddr) {
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    runProcessServer();
+                    runProcessServer(clientIpAddr);
                 } catch (ExecutionException e) {
                     e.printStackTrace();
                 } catch (InterruptedException e) {
@@ -105,24 +105,26 @@ public class ViewController implements Initializable, OnAcceptInterface{
         }).start();
     }
 
-    private void runProcessServer() throws ExecutionException, InterruptedException {
+    public void runProcessServer(String clientIpAddr) throws ExecutionException, InterruptedException {
         isProcessServerOn = true;
-        while (isProcessServerOn == true) {
-            ExecutorService executorService = Executors.newSingleThreadExecutor();
-            Future<List<String>> future = executorService.submit(new ProcessServer(6066));
 
-            ProcessParse dataParser = new ProcessParse(future.get());
-            data = dataParser.getOutputList();
+        new ManageServer().sendSendMessage(clientIpAddr);
 
-            Platform.runLater(() -> {
-                table.setItems(data);
-            });
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        Future<List<String>> future = executorService.submit(new ProcessServer(6066));
 
-            executorService.shutdown();
-        }
+        ProcessParse dataParser = new ProcessParse(future.get());
+        data = dataParser.getOutputList();
+
+        Platform.runLater(() -> {
+            table.setItems(data);
+        });
+
+        executorService.shutdown();
+
     }
 
-    private void stopServer() {
+    public void stopServer() {
         isProcessServerOn = false;
     }
 
