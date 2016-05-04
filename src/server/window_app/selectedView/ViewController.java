@@ -12,7 +12,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.RowConstraints;
 import procManageLib.ManageServer;
 import processLib.ProcessModel;
 import processLib.ProcessParse;
@@ -55,7 +58,7 @@ public class ViewController implements Initializable, OnAcceptInterface{
         Label testKuba = new Label("Miejsce dla Kuby");
         gridPane.add(testKuba, 1, 0);
         //=======================================================
-
+        setupGridPaneConstraints();
     }
 
 
@@ -81,12 +84,11 @@ public class ViewController implements Initializable, OnAcceptInterface{
         sessionName.setCellValueFactory(new PropertyValueFactory<ProcessModel, String>("sessionName"));
 
         table.getColumns().addAll(processName, sessionName);
-        table.setPadding(new Insets(10, 10, 10, 10));
         table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         table.setItems(data);
-
         gridPane.add(table, 1, 1);
+
         listenForProcesses(clientIpAddr);
     }
 
@@ -128,6 +130,21 @@ public class ViewController implements Initializable, OnAcceptInterface{
         isProcessServerOn = false;
     }
 
+    private void setupGridPaneConstraints() {
+        ColumnConstraints col1 = new ColumnConstraints();
+        ColumnConstraints col2 = new ColumnConstraints();
+
+        col1.setPercentWidth(80);
+        col2.setPercentWidth(20);
+        col2.setFillWidth(true);
+        col2.setHgrow(Priority.ALWAYS);
+
+        gridPane.getColumnConstraints().addAll(col1,col2);
+        gridPane.setHgap(80);
+        //gridPane.setPadding(new Insets(20, 20, 20, 20));
+        gridPane.setStyle("-fx-background-color: #595959");
+    }
+
     @Override
     public ImageView createView(BufferedImage img, Socket socket) {
         final ImageView view = new ImageView();
@@ -137,6 +154,9 @@ public class ViewController implements Initializable, OnAcceptInterface{
             @Override
             public void run() {
                 view.setImage(buffimg);
+                view.setPreserveRatio(true);
+                view.fitWidthProperty().bind(gridPane.widthProperty().divide(1.25));
+                view.fitHeightProperty().bind(gridPane.widthProperty());
                 gridPane.add( view, 0, 0, 1, 2);
             }
         });

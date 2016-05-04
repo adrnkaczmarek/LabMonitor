@@ -12,12 +12,14 @@ public class ViewStage extends Stage {
     public ViewStage( String host, int port ){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("selected_view.fxml"));
         Parent root = null;
+
         try {
             root = fxmlLoader.load();
         }catch (Exception e){e.printStackTrace();}
-        this.setMinHeight(700);
+
+        this.setMinHeight(600);
         this.setMinWidth(1200);
-        this.setTitle("Widok");
+        this.setTitle("Widok z adresu: " + host.substring(1).split(":")[0]);
         this.setScene( new Scene(root) );
         this.show();
 
