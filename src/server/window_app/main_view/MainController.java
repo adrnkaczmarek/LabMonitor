@@ -6,18 +6,28 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.*;
+import javafx.geometry.Insets;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import server.screenLib.OnAcceptInterface;
 import server.screenLib.ScreenViewServer;
 import server.window_app.selectedView.ViewStage;
+import javafx.scene.control.Label;
 
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.scene.paint.Color;
 
 public class MainController implements Initializable, OnAcceptInterface
 {
@@ -45,7 +55,21 @@ public class MainController implements Initializable, OnAcceptInterface
             @Override
             public void run() {
                 view.setImage(buffimg);
-                videoPanel.getChildren().add(view);
+
+                String[] addr = socket.getRemoteSocketAddress().toString().substring(1).split(":");
+
+                Text ipTxt = new Text(addr[0]);
+                ipTxt.setStyle("-fx-font: 24 arial;");
+                ipTxt.setFill(Color.WHITE);
+
+                GridPane gridPane = new GridPane();
+                gridPane.add(view, 0, 0);
+                gridPane.setMargin(view, new Insets(8, 8, 0, 8));
+                gridPane.add(ipTxt,0,1);
+                gridPane.setHalignment(ipTxt, HPos.CENTER);
+                gridPane.setStyle("-fx-background-color: #262626");
+
+                videoPanel.getChildren().add(gridPane);
             }
         });
         return view;

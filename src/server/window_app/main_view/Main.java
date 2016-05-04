@@ -16,11 +16,14 @@ public class Main extends Application
     public void start( Stage primaryStage ) throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("main_view.fxml"));
+
         primaryStage.setTitle("Lab Monitor");
         primaryStage.setMaximized(true);
         primaryStage.setMinHeight(500);
         primaryStage.setMinWidth(800);
         primaryStage.setScene(new Scene(root));
+
+
         primaryStage.show();
     }
 }

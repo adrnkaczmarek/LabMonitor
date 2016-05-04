@@ -43,7 +43,7 @@ public class ManageListener implements Runnable{
 
                     String msg = new String(buf, 0, buf.length);
                     System.out.println("[MANAGE LISTENER] Message received - " + msg);
-                    System.out.println("{TEST] SEND:/" + InetAddress.getLocalHost().getHostAddress());
+                    System.out.println("[TEST] SEND:/" + InetAddress.getLocalHost().getHostAddress());
 
                     if (msg.startsWith("SEND:/" + InetAddress.getLocalHost().getHostAddress())) {
                         System.out.println("Is started");
