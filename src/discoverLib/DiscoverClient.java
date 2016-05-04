@@ -22,11 +22,11 @@ public class DiscoverClient {
                 byte[] buf = new byte[10];
 
                 DatagramPacket discoverPacket = new DatagramPacket(buf, buf.length);
-                System.out.println("[DISCOVER CLIENT] Listening...");
+                //System.out.println("[DISCOVER CLIENT] Listening...");
                 clientSocket.receive(discoverPacket);
 
                 String msg = new String(buf, 0, buf.length);
-                System.out.println("[DISCOVER CLIENT] Message received - " + msg);
+                //System.out.println("[DISCOVER CLIENT] Message received - " + msg);
                 if(msg.startsWith("myDISCOVER")) {
                     return (discoverPacket.getAddress().toString());
                 }

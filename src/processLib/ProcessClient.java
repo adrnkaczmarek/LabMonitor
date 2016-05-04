@@ -18,8 +18,6 @@ public class ProcessClient implements Runnable {
     public void run() {
         String osName = System.getProperty("os.name");
 
-        //tmp, poki nie bedzie komunikacji
-        while(true) {
             if (osName.startsWith("Windows")) {
                 try {
                     connectAndSend(Runtime.getRuntime().exec(System.getenv("windir") + "\\system32\\" + "tasklist.exe"));
@@ -38,11 +36,12 @@ public class ProcessClient implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        }
+
     }
 
     private void connectAndSend(Process p) {
         try {
+            System.out.println("[PROCESS CLIENT] Start.");
             Socket client = new Socket(ipAdd, port);
             OutputStream outToServer = client.getOutputStream();
             DataOutputStream output = new DataOutputStream(outToServer);
@@ -53,10 +52,12 @@ public class ProcessClient implements Runnable {
                 output.writeUTF(line);
             }
 
+            System.out.println("[PROCESS CLIENT] Data sent.");
+
             reader.close();
             client.close();
         } catch (Exception e) {
-            System.out.println("[CLIENT] Unable to connect with server.");
+            System.out.println("[PROCESS CLIENT] Unable to connect with server.");
         }
     }
 }

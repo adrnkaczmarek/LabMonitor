@@ -37,9 +37,9 @@ public class ProcessServer implements Callable {
 
     private void startServer() throws IOException, InterruptedException {
         serverSocket = new ServerSocket(port);
-        System.out.println("[SERVER] Waiting for client on port: " + port + "...");
+        System.out.println("[PROCESS SERVER] Waiting for client on port: " + port + "...");
         socket = serverSocket.accept();
-        System.out.println("[SERVER] Just connected to: " + socket.getRemoteSocketAddress());
+        System.out.println("[PROCESS SERVER] Just connected to: " + socket.getRemoteSocketAddress());
     }
 
     private void readData() {
