@@ -47,6 +47,7 @@ public class SendScreenTask extends TimerTask {
                 outputLocal.close();
                 refSock.close();
             } catch (Exception exc) {e.printStackTrace();}
+            (new ScreenViewClient(11938)).listenForMaximized();
         }
     }
 }

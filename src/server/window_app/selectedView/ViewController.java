@@ -5,7 +5,6 @@ import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -15,7 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
-import javafx.scene.layout.RowConstraints;
+import library.Screen;
 import procManageLib.ManageServer;
 import processLib.ProcessModel;
 import processLib.ProcessParse;
@@ -48,7 +47,7 @@ public class ViewController implements Initializable, OnAcceptInterface{
     private TableView table = new TableView();
     private ObservableList<ProcessModel> data;
     private Boolean isProcessServerOn = false;
-
+    private ScreenView screenView;
 
 
 
@@ -67,7 +66,8 @@ public class ViewController implements Initializable, OnAcceptInterface{
         Socket socket = null;
         try{
             System.out.println("[SERVER] host: " + host + " port: " + port);
-            new ScreenView(new Socket(host.split(":")[0].substring(1), 11938), this, maximizedView).start();
+            screenView = new ScreenView(new Socket(host.split(":")[0].substring(1), 11938), this, maximizedView);
+            screenView.start();
         }catch (Exception e){
             e.printStackTrace();
             try{socket.close();} catch (Exception innerE){innerE.printStackTrace();}
@@ -128,6 +128,7 @@ public class ViewController implements Initializable, OnAcceptInterface{
 
     public void stopServer() {
         isProcessServerOn = false;
+        screenView.closeSocket();
     }
 
     private void setupGridPaneConstraints() {
@@ -164,9 +165,7 @@ public class ViewController implements Initializable, OnAcceptInterface{
     }
 
     @Override
-    public void deleteView(Object view) {
-
-    }
+    public void deleteView(Object view) {}
 
     @Override
     public void onReceive(BufferedImage img, Object view) {

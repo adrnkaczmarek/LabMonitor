@@ -12,6 +12,7 @@ public class ScreenView extends Thread {
     private Socket socket;
     private OnAcceptInterface acceptEvent;
     private Object view;
+    private DataInputStream inputStream;
 
     public ScreenView(Socket socket, OnAcceptInterface event, ImageView image){
         this.socket = socket;
@@ -19,9 +20,17 @@ public class ScreenView extends Thread {
         view = image;
     }
 
+    public void closeSocket(){
+        try {
+            socket.close();
+            inputStream.close();
+        } catch (Exception exc) {
+            exc.printStackTrace();
+        }
+    }
+
     @Override
     public void run() {
-        DataInputStream inputStream = null;
         int length;
         try {
             inputStream = IOOperations.initInput(socket);
@@ -33,13 +42,8 @@ public class ScreenView extends Thread {
             }
         }catch (Exception e) {
             e.printStackTrace();
-            try {
-                socket.close();
-                inputStream.close();
-                acceptEvent.deleteView(view);
-            } catch (Exception exc) {
-                exc.printStackTrace();
-            }
+            closeSocket();
+            acceptEvent.deleteView(view);
         }
     }
 }

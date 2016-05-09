@@ -29,12 +29,17 @@ public class ScreenViewClient {
     }
 
     public void listenForMaximized(){
-        try{
-            socket = litener.accept();
-        }catch (Exception e){e.printStackTrace();}
-        System.out.println("[IMAGE CLIENT] Maximize request");
-        timer = new Timer();
-        SendScreenTask task = new SendScreenTask( socket, timer, 1.5 );
-        timer.schedule(task, 0, 10);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    socket = litener.accept();
+                }catch (Exception e){e.printStackTrace();}
+                System.out.println("[IMAGE CLIENT] Maximize request");
+                timer = new Timer();
+                SendScreenTask task = new SendScreenTask( socket, timer, 1.5 );
+                timer.schedule(task, 0, 10);
+            }
+        }).start();
     }
 }
