@@ -157,21 +157,21 @@ public class ViewController implements Initializable, OnAcceptInterface{
                 view.setPreserveRatio(true);
                 view.fitWidthProperty().bind(gridPane.widthProperty().divide(1.25));
                 view.fitHeightProperty().bind(gridPane.widthProperty());
-                gridPane.add( view, 0, 0, 1, 2);
+                gridPane.add(view, 0, 0, 1, 2);
             }
         });
         return view;
     }
 
     @Override
-    public void deleteView(ImageView view) {
+    public void deleteView(Object view) {
 
     }
 
     @Override
-    public void onReceive(BufferedImage img, ImageView view) {
+    public void onReceive(BufferedImage img, Object view) {
         final Image screenshot = SwingFXUtils.toFXImage(img, null);
-        Platform.runLater(new ChangeImage(view) {
+        Platform.runLater(new ChangeImage((ImageView)view) {
             @Override
             public void run() {
                 this.setImage(screenshot);

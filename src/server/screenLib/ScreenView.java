@@ -11,7 +11,7 @@ public class ScreenView extends Thread {
 
     private Socket socket;
     private OnAcceptInterface acceptEvent;
-    private ImageView view;
+    private Object view;
 
     public ScreenView(Socket socket, OnAcceptInterface event, ImageView image){
         this.socket = socket;
