@@ -10,12 +10,16 @@ import javafx.fxml.Initializable;
 import javafx.geometry.*;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
+import javafx.scene.control.ProgressIndicator;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import server.screenLib.OnAcceptInterface;
 import server.screenLib.ScreenViewServer;
 import server.window_app.selectedView.ViewStage;
@@ -30,15 +34,25 @@ public class MainController implements Initializable, OnAcceptInterface
 {
     @FXML
     private FlowPane videoPanel;
+    private VBox waitingPane = new VBox();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         new Thread(new DiscoverServer()).start();
         new Thread(new ScreenViewServer(11937, this)).start();
+
+        setupWaitingPane();
+        showWaitingPane();
     }
 
     @Override
     public Object createView( BufferedImage img , Socket socket ) {
+
+        Platform.runLater(() -> {
+            videoPanel.getChildren().remove(waitingPane);
+            videoPanel.setAlignment(Pos.TOP_LEFT);
+        });
+
         final ImageView view = new ImageView();
         final Image buffimg = SwingFXUtils.toFXImage(img, null);
         final GridPane pane = new GridPane();
@@ -79,6 +93,12 @@ public class MainController implements Initializable, OnAcceptInterface
                 videoPanel.getChildren().remove(view);
             }
         });
+
+        Platform.runLater(() -> {
+            if(videoPanel.getChildren().isEmpty()) {
+                showWaitingPane();
+            }
+        });
     }
 
     @Override
@@ -94,5 +114,27 @@ public class MainController implements Initializable, OnAcceptInterface
                     }
                 });
         }
+    }
+
+    private void setupWaitingPane() {
+        //waitingPane.setStyle("-fx-background-color: #262626");
+
+        ProgressIndicator indicator = new ProgressIndicator();
+        //indicator.setPadding(new Insets(10,10,10,10));
+
+        Text waitingText = new Text("Waiting for clients...");
+        waitingText.setStyle("-fx-font: 24 calibri;");
+        //waitingText.setFill(Color.WHITE);
+
+        waitingPane.setSpacing(20);
+        waitingPane.setMinSize(350,250);
+
+        waitingPane.setAlignment(Pos.CENTER);
+        waitingPane.getChildren().addAll(indicator, waitingText);
+    }
+
+    private void showWaitingPane() {
+        videoPanel.setAlignment(Pos.CENTER);
+        videoPanel.getChildren().add(waitingPane);
     }
 }
