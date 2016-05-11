@@ -1,19 +1,22 @@
 package server.window_app.selectedView;
 
+import com.sun.rowset.internal.Row;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Priority;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import library.Screen;
 import procManageLib.ManageServer;
 import processLib.ProcessModel;
@@ -53,10 +56,7 @@ public class ViewController implements Initializable, OnAcceptInterface{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //=================DO WYWALENIA TESTY GRIDA==============
-        Label testKuba = new Label("Miejsce dla Kuby");
-        gridPane.add(testKuba, 1, 0);
-        //=======================================================
+
         setupGridPaneConstraints();
     }
 
@@ -75,6 +75,12 @@ public class ViewController implements Initializable, OnAcceptInterface{
     }
 
     public void setupProcessTable(String clientIpAddr) {
+        Text contentText = new Text("Aktywne procesy");
+        contentText.setStyle("-fx-font: 20 arial;");
+        contentText.setFill(Color.WHITE);
+        gridPane.add(contentText, 1, 0);
+
+
         table.setEditable(true);
 
         TableColumn processName = new TableColumn("Process");
@@ -141,13 +147,33 @@ public class ViewController implements Initializable, OnAcceptInterface{
         col2.setHgrow(Priority.ALWAYS);
 
         gridPane.getColumnConstraints().addAll(col1,col2);
-        gridPane.setHgap(80);
-        //gridPane.setPadding(new Insets(20, 20, 20, 20));
-        gridPane.setStyle("-fx-background-color: #595959");
+
+        RowConstraints row1 = new RowConstraints();
+        RowConstraints row2 = new RowConstraints();
+
+        //row1.setPercentHeight(5);
+        row2.setPercentHeight(90);
+        row2.setVgrow(Priority.ALWAYS);
+
+
+       gridPane.getRowConstraints().addAll(row1,row2);
+
+        gridPane.setHgap(35);
+        gridPane.setVgap(15);
+        gridPane.setPadding(new Insets(20, 10, 10, 10));
+
+        Text videoText = new Text("Pogląd monitora");
+        videoText.setStyle("-fx-font: 20 arial;");
+        videoText.setFill(Color.WHITE);
+        gridPane.add(videoText,0, 0);
     }
 
     @Override
     public ImageView createView(BufferedImage img, Socket socket) {
+        StackPane ipane = new StackPane();
+        ipane.setAlignment(Pos.CENTER);
+        ipane.setStyle("-fx-background-color: #000000");
+
         final ImageView view = new ImageView();
         final Image buffimg = SwingFXUtils.toFXImage(img, null);
         System.out.println("[SERVER]Image received");
@@ -156,9 +182,13 @@ public class ViewController implements Initializable, OnAcceptInterface{
             public void run() {
                 view.setImage(buffimg);
                 view.setPreserveRatio(true);
-                view.fitWidthProperty().bind(gridPane.widthProperty().divide(1.25));
-                view.fitHeightProperty().bind(gridPane.widthProperty());
-                gridPane.add(view, 0, 0, 1, 2);
+
+                //view.fitWidthProperty().bind(gridPane.widthProperty().divide(1.25));
+                view.fitWidthProperty().bind(gridPane.widthProperty().divide(1.4));
+                view.fitHeightProperty().bind(gridPane.heightProperty().divide(1.1));
+
+                ipane.getChildren().add(view);
+                gridPane.add(ipane, 0, 1, 1, 2);
             }
         });
         return view;

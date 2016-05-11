@@ -77,7 +77,7 @@ public class MainController implements Initializable, OnAcceptInterface
                 pane.setMargin(view, new Insets(8, 8, 0, 8));
                 pane.add(ipTxt,0,1);
                 pane.setHalignment(ipTxt, HPos.CENTER);
-                pane.setStyle("-fx-background-color: #262626");
+                pane.setStyle("-fx-background-color: #1a1a1a");
 
                 videoPanel.getChildren().add(pane);
             }
@@ -117,14 +117,11 @@ public class MainController implements Initializable, OnAcceptInterface
     }
 
     private void setupWaitingPane() {
-        //waitingPane.setStyle("-fx-background-color: #262626");
-
         ProgressIndicator indicator = new ProgressIndicator();
-        //indicator.setPadding(new Insets(10,10,10,10));
 
-        Text waitingText = new Text("Waiting for clients...");
+        Text waitingText = new Text("Oczekiwanie na połączenia...");
         waitingText.setStyle("-fx-font: 24 calibri;");
-        //waitingText.setFill(Color.WHITE);
+        waitingText.setFill(Color.WHITE);
 
         waitingPane.setSpacing(20);
         waitingPane.setMinSize(350,250);
