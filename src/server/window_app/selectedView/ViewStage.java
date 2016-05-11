@@ -17,8 +17,8 @@ public class ViewStage extends Stage {
             root = fxmlLoader.load();
         }catch (Exception e){e.printStackTrace();}
 
-        this.setMinHeight(600);
-        this.setMinWidth(1200);
+        this.setMinHeight(700);
+        this.setMinWidth(1300);
         this.setTitle("Widok z adresu: " + host.substring(1).split(":")[0]);
         this.setScene( new Scene(root) );
         this.show();

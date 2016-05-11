@@ -17,12 +17,11 @@ public class Main extends Application
     {
         Parent root = FXMLLoader.load(getClass().getResource("main_view.fxml"));
 
-        primaryStage.setTitle("Lab Monitor");
-        primaryStage.setMaximized(true);
+        primaryStage.setTitle("Monitorowanie sali laboratoryjnej");
+        //primaryStage.setMaximized(true);
         primaryStage.setMinHeight(500);
         primaryStage.setMinWidth(800);
         primaryStage.setScene(new Scene(root));
-
 
         primaryStage.show();
     }

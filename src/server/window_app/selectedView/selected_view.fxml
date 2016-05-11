@@ -1,5 +1,5 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.GridPane?>
 
-<GridPane fx:controller="server.window_app.selectedView.ViewController" xmlns:fx="http://javafx.com/fxml" fx:id="gridPane">
+<GridPane fx:controller="server.window_app.selectedView.ViewController" xmlns:fx="http://javafx.com/fxml" fx:id="gridPane" style="-fx-background-color: #333333">
 </GridPane>
