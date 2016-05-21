@@ -62,15 +62,13 @@ public class ViewController implements Initializable, OnAcceptInterface{
 
 
 
-    public void setupRemoteHostConnection(String host, int port){
-        Socket socket = null;
+    public void setupImageDisplay(String host, int port){
         try{
             System.out.println("[SERVER] host: " + host + " port: " + port);
             screenView = new ScreenView(new Socket(host.split(":")[0].substring(1), 11938), this, maximizedView);
             screenView.start();
         }catch (Exception e){
             e.printStackTrace();
-            try{socket.close();} catch (Exception innerE){innerE.printStackTrace();}
         }
     }
 
@@ -132,7 +130,7 @@ public class ViewController implements Initializable, OnAcceptInterface{
 
     }
 
-    public void stopServer() {
+    public void stopView() {
         isProcessServerOn = false;
         screenView.closeSocket();
     }

@@ -24,13 +24,13 @@ public class ViewStage extends Stage {
         this.show();
 
         ViewController controller = fxmlLoader.<ViewController>getController();
-        controller.setupRemoteHostConnection(host, port);
+        controller.setupImageDisplay(host, port);
         controller.setupProcessTable(host);
 
         this.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
-                controller.stopServer();
+                controller.stopView();
             }
         });
     }

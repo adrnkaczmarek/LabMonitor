@@ -8,9 +8,9 @@ import java.net.Socket;
 
 public class ScreenViewServer implements Runnable {
 
-    private ServerSocket server;
-    private Socket socket;
+    private static ServerSocket server;
     private OnAcceptInterface acceptEvent;
+    public static boolean isRunning = true;
 
     public ScreenViewServer(int port, OnAcceptInterface acceptEvent){
     	try {
@@ -21,21 +21,26 @@ public class ScreenViewServer implements Runnable {
         this.acceptEvent = acceptEvent;
     }
 
+    public static void closeServer(){
+        try{
+            server.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void run() {
-        while(true) {
+        System.out.println("[Server] " + Thread.currentThread().getName() + " started");
+        while(isRunning) {
             try {
-                this.socket = this.server.accept();
+                Socket socket = this.server.accept();
+                new ScreenView(socket, this.acceptEvent, new ImageView()).start();
             } catch (Exception e) {
                 e.printStackTrace();
-                try {
-                    socket.close();
-                    server.close();
-                } catch (Exception exc) {
-                    exc.printStackTrace();
-                }
+                closeServer();
             }
-            new ScreenView(this.socket, this.acceptEvent, new ImageView()).start();
         }
+        System.out.println("[Server] " + Thread.currentThread().getName() + " closed");
     }
 }

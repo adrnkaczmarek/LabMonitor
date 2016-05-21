@@ -1,27 +1,34 @@
 package client;
 
-import discoverLib.DiscoverClient;
-import procManageLib.ManageListener;
-import processLib.ProcessClient;
+import javafx.application.Application;
+import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
-public class Main {
+public class Main extends Application{
 	
     public static void main(String[] args) {
-        new Thread(new Runnable() {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("client_view.fxml"));
+
+        primaryStage.setTitle("Monitorowanie");
+        primaryStage.setHeight(150);
+        primaryStage.setWidth(250);
+        primaryStage.setScene(new Scene(root));
+
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
-            public void run() {
-                String serverIpAddr = new DiscoverClient().getServerAddress();
-
-                new Thread(new ManageListener(serverIpAddr.substring(1), 6066)).start();
-
-                (new ScreenViewClient(serverIpAddr.substring(1), 11937)).sendingSmallScreen();
-
-                (new ScreenViewClient(11938)).listenForMaximized();
-
-                //new Thread(new ProcessClient(serverIpAddr.substring(1), 6066)).start();   //poki co wysyla na okraglo, pozniej dorobie komunikacje
-
-
+            public void handle(WindowEvent event) {
             }
-        }).start();
-    }    
+        });
+
+        primaryStage.show();
+    }
 }
