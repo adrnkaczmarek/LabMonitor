@@ -64,8 +64,8 @@ public class ViewController implements Initializable, OnAcceptInterface{
 
     public void setupImageDisplay(String host, int port){
         try{
-            System.out.println("[SERVER] host: " + host + " port: " + port);
-            screenView = new ScreenView(new Socket(host.split(":")[0].substring(1), 11938), this, maximizedView);
+            System.out.println("[SERVER] maximize - host: " + host + " port: " + port);
+            screenView = new ScreenView(new Socket(host.split(":")[0].substring(1), 11938+100), this, maximizedView);
             screenView.start();
         }catch (Exception e){
             e.printStackTrace();

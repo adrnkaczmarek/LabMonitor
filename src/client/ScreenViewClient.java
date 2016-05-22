@@ -20,7 +20,7 @@ public class ScreenViewClient {
 
     public ScreenViewClient(int portNmb){
         try {
-            litener = new ServerSocket(portNmb);
+            litener = new ServerSocket(portNmb+100);
         }catch( Exception e){e.printStackTrace();}
     }
 	
@@ -57,6 +57,7 @@ public class ScreenViewClient {
                     timer = new Timer();
                     SendScreenTask task = new SendScreenTask( socket, timer, 1.5 );
                     timer.schedule(task, 0, 10);
+                    stopMaxClient();
                     System.out.println("[CLIENT]" + Thread.currentThread().getName() + " closed");
                 }catch (Exception e){e.printStackTrace();}
             }
