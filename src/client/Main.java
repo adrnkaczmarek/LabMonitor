@@ -28,7 +28,6 @@ public class Main extends Application{
             public void handle(WindowEvent event) {
             }
         });
-
         primaryStage.show();
     }
 }

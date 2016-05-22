@@ -14,6 +14,8 @@ public class ClientController implements Initializable{
     @FXML
     protected Button start, stop;
 
+    ScreenViewClient clientSmallView, clientMaxView;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {}
 
@@ -24,11 +26,17 @@ public class ClientController implements Initializable{
         new Thread(new Runnable() {
             @Override
             public void run() {
+                System.out.println("[Client]"+ Thread.currentThread().getName() +" started");
                 String serverIpAddr = new DiscoverClient().getServerAddress();
+
+                clientSmallView = new ScreenViewClient(serverIpAddr.substring(1), 11937);
+                clientMaxView = new ScreenViewClient(11938);
+                clientSmallView.sendingSmallScreen();
+                clientMaxView.listenForMaximized();
+
                 new Thread(new ManageListener(serverIpAddr.substring(1), 6066)).start();
-                (new ScreenViewClient(serverIpAddr.substring(1), 11937)).sendingSmallScreen();
-                (new ScreenViewClient(11938)).listenForMaximized();
                 //new Thread(new ProcessClient(serverIpAddr.substring(1), 6066)).start();   //poki co wysyla na okraglo, pozniej dorobie komunikacje
+                System.out.println("[Client]"+ Thread.currentThread().getName() +" closed");
             }
         }).start();
     }
@@ -37,5 +45,7 @@ public class ClientController implements Initializable{
     protected void stop(){
         stop.setDisable(true);
         start.setDisable(false);
+        clientSmallView.stopSmallClient();
+        clientMaxView.stopMaxClient();
     }
 }

@@ -24,6 +24,14 @@ public class SendScreenTask extends TimerTask {
         this.timer = timer;
     }
 
+    public void closeConn(){
+        try {
+            getOutput().close();
+            refSock.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public DataOutputStream getOutput(){
         return this.output;
@@ -31,23 +39,18 @@ public class SendScreenTask extends TimerTask {
 
     @Override
     public void run() {
-
-        DataOutputStream outputLocal = null;
         try{
-            outputLocal = getOutput();
-
             byte[] a = Conversions.imageToByteArray(Screen.getScreenshot(screenshotDimension));
-            outputLocal.writeInt(a.length);
-            outputLocal.write(a);
+            getOutput().writeInt(a.length);
+            getOutput().write(a);
 
         }catch(Exception e){
             e.printStackTrace();
             timer.cancel();
-            try {
-                outputLocal.close();
-                refSock.close();
-            } catch (Exception exc) {e.printStackTrace();}
-            (new ScreenViewClient(11938)).listenForMaximized();
+            if(!refSock.isClosed()){
+                closeConn();
+                (new ScreenViewClient(11938)).listenForMaximized();
+            }
         }
     }
 }
