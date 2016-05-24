@@ -3,19 +3,25 @@ package discoverLib;
 import java.io.IOException;
 import java.net.*;
 
-public class DiscoverServer implements Runnable {
+public class DiscoverServer extends Thread {
 
     final static String multicastAddress = "224.0.0.3";
     final static int port = 8888;
+
+    private boolean finished = false;
+
+    public void stopServer() {
+        finished = true;
+    }
 
     @Override
     public void run() {
         try {
             InetAddress inetAddress = InetAddress.getByName(multicastAddress);
             try (DatagramSocket serverSocket = new DatagramSocket()) {
-                //System.out.println("[DISCOVER SERVER] Socket created.");
+                System.out.println("[DISCOVER SERVER] Socket created.");
                 String msg = "myDISCOVER";
-                while(true) {
+                while(!finished) {
                     DatagramPacket discoverPacket = new DatagramPacket(msg.getBytes(), msg.getBytes().length, inetAddress, port);
                     serverSocket.send(discoverPacket);
                     //System.out.println("[DISCOVER SERVER] Message sent. Size = " + discoverPacket.getLength());

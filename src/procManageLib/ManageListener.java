@@ -11,7 +11,7 @@ import java.net.UnknownHostException;
 /**
  * Created by Krzys on 2016-05-02.
  */
-public class ManageListener implements Runnable{
+public class ManageListener extends Thread{
     final static String multicastAddress = "224.0.0.4";
     final static int port = 7777;
 
@@ -21,14 +21,20 @@ public class ManageListener implements Runnable{
     private boolean isActive = true;
     private boolean startReceived = false;
 
+    private boolean finished = false;
+
     public ManageListener(String serverAddr, int serverPort) {
         this.serverAddr = serverAddr;
         this.serverPort = serverPort;
     }
 
+    public void stopManageServer() {
+        finished = true;
+    }
+
     @Override
     public void run() {
-        while (true) {
+        while (!finished) {
             try {
                 InetAddress inetAddress = InetAddress.getByName(multicastAddress);
 
