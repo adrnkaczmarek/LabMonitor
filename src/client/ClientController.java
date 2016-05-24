@@ -14,6 +14,8 @@ public class ClientController implements Initializable{
     @FXML
     protected Button start, stop;
 
+    private ManageListener manageListener;
+
     ScreenViewClient clientSmallView, clientMaxView;
 
     @Override
@@ -34,8 +36,10 @@ public class ClientController implements Initializable{
                 clientSmallView.sendingSmallScreen();
                 clientMaxView.listenForMaximized();
 
-                new Thread(new ManageListener(serverIpAddr.substring(1), 6066)).start();
-                //new Thread(new ProcessClient(serverIpAddr.substring(1), 6066)).start();   //poki co wysyla na okraglo, pozniej dorobie komunikacje
+                //new Thread(new ManageListener(serverIpAddr.substring(1), 6066)).start();
+                manageListener = new ManageListener(serverIpAddr.substring(1), 6066);
+                manageListener.start();
+
                 System.out.println("[Client]"+ Thread.currentThread().getName() +" closed");
             }
         }).start();
@@ -47,5 +51,14 @@ public class ClientController implements Initializable{
         start.setDisable(false);
         clientSmallView.stopSmallClient();
         clientMaxView.stopMaxClient();
+
+        stopManageServer();
+    }
+
+    public void stopManageServer() {
+        if(manageListener != null)
+            manageListener.stop();
+        //if(manageListener != null)
+            //manageListener.stopManageServer();
     }
 }

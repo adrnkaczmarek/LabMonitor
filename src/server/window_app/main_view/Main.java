@@ -1,5 +1,6 @@
 package server.window_app.main_view;
 
+import discoverLib.DiscoverServer;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -21,6 +22,9 @@ public class Main extends Application
     {
         Parent root = FXMLLoader.load(getClass().getResource("server_view.fxml"));
 
+        DiscoverServer discoverThread = new DiscoverServer();
+        discoverThread.start();
+
         primaryStage.setTitle("Monitorowanie sali laboratoryjnej");
         //primaryStage.setMaximized(true);
         primaryStage.setMinHeight(500);
@@ -33,6 +37,7 @@ public class Main extends Application
                 ScreenView.isRunning = false;
                 ScreenViewServer.isRunning = false;
                 ScreenViewServer.closeServer();
+                discoverThread.stopServer();
             }
         });
 

@@ -38,7 +38,7 @@ public class MainController implements Initializable, OnAcceptInterface
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        new Thread(new DiscoverServer()).start();
+        //new Thread(new DiscoverServer()).start();
         new Thread(new ScreenViewServer(11937, this)).start();
 
         setupWaitingPane();

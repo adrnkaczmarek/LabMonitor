@@ -160,7 +160,7 @@ public class ViewController implements Initializable, OnAcceptInterface{
         gridPane.setVgap(15);
         gridPane.setPadding(new Insets(20, 10, 10, 10));
 
-        Text videoText = new Text("Pogląd monitora");
+        Text videoText = new Text("Ekran");
         videoText.setStyle("-fx-font: 20 arial;");
         videoText.setFill(Color.WHITE);
         gridPane.add(videoText,0, 0);
