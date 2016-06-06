@@ -28,6 +28,7 @@ public class ClientController implements Initializable{
         new Thread(new Runnable() {
             @Override
             public void run() {
+                openedPages.client.ClientPagesManager.StartClient();
                 System.out.println("[Client]"+ Thread.currentThread().getName() +" started");
                 String serverIpAddr = new DiscoverClient().getServerAddress();
 

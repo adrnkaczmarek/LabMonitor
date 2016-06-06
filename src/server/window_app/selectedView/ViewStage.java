@@ -26,6 +26,7 @@ public class ViewStage extends Stage {
         ViewController controller = fxmlLoader.<ViewController>getController();
         controller.setupImageDisplay(host, port);
         controller.setupProcessTable(host);
+        controller.setupPagesTable(host);
 
         this.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override

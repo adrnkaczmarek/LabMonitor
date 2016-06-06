@@ -40,6 +40,7 @@ public class MainController implements Initializable, OnAcceptInterface
     public void initialize(URL location, ResourceBundle resources) {
         //new Thread(new DiscoverServer()).start();
         new Thread(new ScreenViewServer(11937, this)).start();
+        openedPages.server.ServerPagesManager.StartServer();
 
         setupWaitingPane();
         showWaitingPane();

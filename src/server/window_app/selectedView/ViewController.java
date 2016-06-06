@@ -2,6 +2,7 @@ package server.window_app.selectedView;
 
 import com.sun.rowset.internal.Row;
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
@@ -29,13 +30,14 @@ import server.window_app.main_view.ChangeImage;
 import java.awt.image.BufferedImage;
 import java.net.Socket;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-
+import openedPages.server.*;
 
 //Dobra mamy tutaj GridPane'a, Adus ma pierwsza kolumne, Krzychu i Kuba druga podzielona na dwa wiersze
 //Jak cos ta lista procesow poki co to troche lipa, bo jak bedzie uruchomionych kilka klientow to bedzie co chwile zmienial ta tabele, musze dodac komunikacje zeby jeden tylko wysylal
@@ -48,8 +50,13 @@ public class ViewController implements Initializable, OnAcceptInterface{
     private ImageView maximizedView;
 
     private TableView table = new TableView();
+    private TableView openedPagesTable = new TableView();
     private ObservableList<ProcessModel> data;
+    private ObservableList<Page> opened_pages_data = FXCollections.observableArrayList();
+
     private Boolean isProcessServerOn = false;
+    private Boolean isViewNotStopped = true;
+
     private ScreenView screenView;
 
 
@@ -76,7 +83,7 @@ public class ViewController implements Initializable, OnAcceptInterface{
         Text contentText = new Text("Aktywne procesy");
         contentText.setStyle("-fx-font: 20 arial;");
         contentText.setFill(Color.WHITE);
-        gridPane.add(contentText, 1, 0);
+        //gridPane.add(contentText, 1, 0);
 
 
         table.setEditable(true);
@@ -91,10 +98,11 @@ public class ViewController implements Initializable, OnAcceptInterface{
         table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         table.setItems(data);
-        gridPane.add(table, 1, 1);
+        gridPane.add(table, 1, 0);
 
         listenForProcesses(clientIpAddr);
     }
+
 
     private void listenForProcesses(String clientIpAddr) {
         new Thread(new Runnable() {
@@ -106,6 +114,61 @@ public class ViewController implements Initializable, OnAcceptInterface{
                     e.printStackTrace();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                }
+            }
+        }).start();
+    }
+    public void setupPagesTable(String clientIp)
+    {
+        //todo:
+        Text contentText = new Text("Otwarte strony:");
+        contentText.setStyle("-fx-font: 20 arial;");
+        contentText.setFill(Color.WHITE);
+        //gridPane.add(contentText, 1, 2);
+
+        openedPagesTable.setEditable(true);
+
+        TableColumn clientIpCol = new TableColumn("Client ip");
+        clientIpCol.setCellValueFactory(new PropertyValueFactory<Page,String>("clientIp"));
+
+        TableColumn pagesCol = new TableColumn("Pages");
+        pagesCol.setCellValueFactory(new PropertyValueFactory<Page,String>("page"));
+
+        //clientIpCol.setVisible(false);
+
+        openedPagesTable.getColumns().addAll(clientIpCol, pagesCol);
+
+
+        openedPagesTable.setItems(opened_pages_data);
+
+        gridPane.add(openedPagesTable, 1, 1);
+        UpdatePagesTable(clientIp);
+    }
+
+    private void UpdatePagesTable(String clientIp)
+    {
+        new Thread(new Runnable() {
+
+
+            @Override
+            public void run() {
+                ArrayList<String> pages = ServerPagesManager.GetPages(clientIp);
+                for (String p: pages ) {
+                    opened_pages_data.add(new Page(clientIp, p));
+                }
+                int lastListLength = pages.size();
+                while(isViewNotStopped)
+                {
+                    pages = ServerPagesManager.GetPages(clientIp);
+                    int current_size = pages.size();
+                    if(current_size > lastListLength)
+                    {
+                        for(int i = lastListLength; i < current_size; i++)
+                        {
+                            opened_pages_data.add(new Page(clientIp, pages.get(i)));
+                        }
+                        lastListLength = current_size;
+                    }
                 }
             }
         }).start();
@@ -132,7 +195,9 @@ public class ViewController implements Initializable, OnAcceptInterface{
 
     public void stopView() {
         isProcessServerOn = false;
+        isViewNotStopped= false;
         screenView.closeSocket();
+
     }
 
     private void setupGridPaneConstraints() {
