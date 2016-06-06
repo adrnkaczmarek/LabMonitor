@@ -8,7 +8,7 @@ import java.io.PrintWriter;
 
 public class ClientPagesManager {
 
-    public static void StartClient()
+    public static void StartClient(String serverIp)
     {
 
         new Thread(new Runnable() {
@@ -22,7 +22,7 @@ public class ClientPagesManager {
                 while (true)
                 {
                     try {
-                        OpenedPagesClient client = new OpenedPagesClient("127.0.0.1", 11938);
+                        OpenedPagesClient client = new OpenedPagesClient(serverIp, 11938);
                         while (true) {
                             Thread.sleep(5000);
                             if(captured_pages.length() > captured_pages_last_length) {

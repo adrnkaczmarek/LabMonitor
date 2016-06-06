@@ -9,7 +9,7 @@ import javafx.stage.WindowEvent;
 
 public class ViewStage extends Stage {
 
-    public ViewStage( String host, int port ){
+    public ViewStage( String host, int port, String hostIp ){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("selected_view.fxml"));
         Parent root = null;
 
@@ -26,7 +26,7 @@ public class ViewStage extends Stage {
         ViewController controller = fxmlLoader.<ViewController>getController();
         controller.setupImageDisplay(host, port);
         controller.setupProcessTable(host);
-        controller.setupPagesTable(host);
+        controller.setupPagesTable(hostIp);
 
         this.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override

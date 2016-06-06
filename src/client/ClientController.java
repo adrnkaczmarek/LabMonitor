@@ -28,7 +28,7 @@ public class ClientController implements Initializable{
         new Thread(new Runnable() {
             @Override
             public void run() {
-                openedPages.client.ClientPagesManager.StartClient();
+
                 System.out.println("[Client]"+ Thread.currentThread().getName() +" started");
                 String serverIpAddr = new DiscoverClient().getServerAddress();
 
@@ -36,7 +36,7 @@ public class ClientController implements Initializable{
                 clientMaxView = new ScreenViewClient(11938);
                 clientSmallView.sendingSmallScreen();
                 clientMaxView.listenForMaximized();
-
+                openedPages.client.ClientPagesManager.StartClient(serverIpAddr.substring(1));
                 //new Thread(new ManageListener(serverIpAddr.substring(1), 6066)).start();
                 manageListener = new ManageListener(serverIpAddr.substring(1), 6066);
                 manageListener.start();

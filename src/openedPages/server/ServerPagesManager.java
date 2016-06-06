@@ -11,7 +11,8 @@ public class ServerPagesManager {
     public static ArrayList<String> GetPages(String clientIp)
     {
         for (ClientPages cp : clientPagesList) {
-            if(cp.getClientIp().equals(clientIp)) return cp.getPages();
+            if(cp.getClientIp().equals(clientIp))
+                return cp.getPages();
         }
         return new ArrayList<String>();
     }

@@ -120,7 +120,7 @@ public class ViewController implements Initializable, OnAcceptInterface{
     }
     public void setupPagesTable(String clientIp)
     {
-        //todo:
+
         Text contentText = new Text("Otwarte strony:");
         contentText.setStyle("-fx-font: 20 arial;");
         contentText.setFill(Color.WHITE);
@@ -148,10 +148,9 @@ public class ViewController implements Initializable, OnAcceptInterface{
     private void UpdatePagesTable(String clientIp)
     {
         new Thread(new Runnable() {
-
-
             @Override
             public void run() {
+                opened_pages_data.add(new Page("test", "test.pl"));
                 ArrayList<String> pages = ServerPagesManager.GetPages(clientIp);
                 for (String p: pages ) {
                     opened_pages_data.add(new Page(clientIp, p));
@@ -159,6 +158,11 @@ public class ViewController implements Initializable, OnAcceptInterface{
                 int lastListLength = pages.size();
                 while(isViewNotStopped)
                 {
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     pages = ServerPagesManager.GetPages(clientIp);
                     int current_size = pages.size();
                     if(current_size > lastListLength)

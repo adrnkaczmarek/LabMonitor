@@ -60,7 +60,7 @@ public class MainController implements Initializable, OnAcceptInterface
         view.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                new ViewStage( socket.getRemoteSocketAddress().toString(), socket.getPort() );
+                new ViewStage( socket.getRemoteSocketAddress().toString(), socket.getPort(), socket.getInetAddress().getHostAddress());
             }
         });
         Platform.runLater(new Runnable() {
