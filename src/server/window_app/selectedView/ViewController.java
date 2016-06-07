@@ -81,9 +81,9 @@ public class ViewController implements Initializable, OnAcceptInterface{
 
     public void setupProcessTable(String clientIpAddr) {
         Text contentText = new Text("Aktywne procesy");
-        contentText.setStyle("-fx-font: 20 arial;");
+        contentText.setStyle("-fx-font: 15 arial;");
         contentText.setFill(Color.WHITE);
-        //gridPane.add(contentText, 1, 0);
+        gridPane.add(contentText, 1, 0);
 
 
         table.setEditable(true);
@@ -98,7 +98,7 @@ public class ViewController implements Initializable, OnAcceptInterface{
         table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         table.setItems(data);
-        gridPane.add(table, 1, 0);
+        gridPane.add(table, 1, 1);
 
         listenForProcesses(clientIpAddr);
     }
@@ -121,10 +121,10 @@ public class ViewController implements Initializable, OnAcceptInterface{
     public void setupPagesTable(String clientIp)
     {
 
-        Text contentText = new Text("Otwarte strony:");
-        contentText.setStyle("-fx-font: 20 arial;");
+        Text contentText = new Text("Otwarte strony");
+        contentText.setStyle("-fx-font: 15 arial;");
         contentText.setFill(Color.WHITE);
-        //gridPane.add(contentText, 1, 2);
+        gridPane.add(contentText, 2, 0);
 
         openedPagesTable.setEditable(true);
 
@@ -134,14 +134,16 @@ public class ViewController implements Initializable, OnAcceptInterface{
         TableColumn pagesCol = new TableColumn("Pages");
         pagesCol.setCellValueFactory(new PropertyValueFactory<Page,String>("page"));
 
+        openedPagesTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
         //clientIpCol.setVisible(false);
 
-        openedPagesTable.getColumns().addAll(clientIpCol, pagesCol);
+        openedPagesTable.getColumns().addAll(pagesCol);
 
 
         openedPagesTable.setItems(opened_pages_data);
 
-        gridPane.add(openedPagesTable, 1, 1);
+        gridPane.add(openedPagesTable, 2, 1);
         UpdatePagesTable(clientIp);
     }
 
@@ -207,13 +209,17 @@ public class ViewController implements Initializable, OnAcceptInterface{
     private void setupGridPaneConstraints() {
         ColumnConstraints col1 = new ColumnConstraints();
         ColumnConstraints col2 = new ColumnConstraints();
+        ColumnConstraints col3 = new ColumnConstraints();
 
-        col1.setPercentWidth(80);
-        col2.setPercentWidth(20);
+        col1.setPercentWidth(75);
+        col2.setPercentWidth(15);
+        col3.setPercentWidth(10);
         col2.setFillWidth(true);
         col2.setHgrow(Priority.ALWAYS);
+        col3.setFillWidth(true);
+        col3.setHgrow(Priority.ALWAYS);
 
-        gridPane.getColumnConstraints().addAll(col1,col2);
+        gridPane.getColumnConstraints().addAll(col1,col2, col3);
 
         RowConstraints row1 = new RowConstraints();
         RowConstraints row2 = new RowConstraints();
@@ -255,7 +261,7 @@ public class ViewController implements Initializable, OnAcceptInterface{
                 view.fitHeightProperty().bind(gridPane.heightProperty().divide(1.1));
 
                 ipane.getChildren().add(view);
-                gridPane.add(ipane, 0, 1, 1, 2);
+                gridPane.add(ipane, 0, 1, 1, 1);
             }
         });
         return view;

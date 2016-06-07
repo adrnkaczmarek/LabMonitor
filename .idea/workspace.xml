@@ -7,33 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/jnetpcap-pcap100.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/jnetpcap.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/jnetpcap.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/CHANGE_LOG.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/COPYING" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/COPYING.LESSER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/RELEASE_NOTES.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/analysis.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/export.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/jnetpcap_bpf.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/jnetpcap_dumper.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/jnetpcap_ids.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/jnetpcap_utils.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/mac_addr.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/nio_jbuffer.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/nio_jmemory.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/packet_flow.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/packet_jscanner.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/packet_protocol.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/util_crc16.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/util_crc32.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/util_debug.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/util_in_cksum.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/winpcap_ext.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/winpcap_ids.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap/include/winpcap_stat_ex.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jnetpcap.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LabMonitor.iml" afterPath="$PROJECT_DIR$/LabMonitor.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/window_app/selectedView/ViewController.java" afterPath="$PROJECT_DIR$/src/server/window_app/selectedView/ViewController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,7 +76,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
               <caret line="38" column="91" selection-start-line="38" selection-start-column="91" selection-end-line="38" selection-end-column="91" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,24 +86,9 @@
       <file leaf-file-name="OpenedPages.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/openedPages/client/OpenedPages.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-              <folding>
-                <element signature="e#1011#1012#0" expanded="false" />
-                <marker date="1465320059976" expanded="true" signature="36:422" placeholder="..." />
-                <marker date="1465320059976" expanded="true" signature="423:465" placeholder="/**...*/" />
-                <marker date="1465320059976" expanded="false" signature="790:800" placeholder=" { " />
-                <marker date="1465320059976" expanded="true" signature="915:1012" placeholder="{...}" />
-                <marker date="1465320059976" expanded="true" signature="1046:1201" placeholder="{...}" />
-                <marker date="1465320059976" expanded="true" signature="1235:2347" placeholder="{...}" />
-                <marker date="1465320059976" expanded="false" signature="2384:2395" placeholder=" { " />
-                <marker date="1465320059976" expanded="false" signature="2426:2432" placeholder=" }" />
-                <marker date="1465320059976" expanded="true" signature="2512:6336" placeholder="{...}" />
-                <marker date="1465320059976" expanded="true" signature="2522:2769" placeholder="//..." />
-                <marker date="1465320059976" expanded="true" signature="3375:5668" placeholder="{...}" />
-                <marker date="1465320059976" expanded="true" signature="3444:5658" placeholder="{...}" />
-                <marker date="1465320059976" expanded="true" signature="4892:4908" placeholder="//..." />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -157,8 +121,8 @@
             <state relative-caret-position="391">
               <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
               <folding>
-                <element signature="e#1112#1113#0" expanded="true" />
-                <element signature="e#1165#1166#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#803#819#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -183,11 +147,9 @@
       <file leaf-file-name="ViewController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/server/window_app/selectedView/ViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="161" column="41" selection-start-line="161" selection-start-column="41" selection-end-line="161" selection-end-column="41" />
-              <folding>
-                <element signature="method#setupGridPaneConstraints#0;class#ViewController#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="123" column="51" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -197,7 +159,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
               <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-              <folding />
+              <folding>
+                <marker date="1465320060038" expanded="false" signature="36:204" placeholder="..." />
+                <marker date="1465320060038" expanded="true" signature="359:603" placeholder="{...}" />
+                <marker date="1465320060038" expanded="true" signature="684:783" placeholder="{...}" />
+                <marker date="1465320060038" expanded="true" signature="855:985" placeholder="{...}" />
+                <marker date="1465320060038" expanded="true" signature="1028:1415" placeholder="{...}" />
+                <marker date="1465320060038" expanded="true" signature="1450:1683" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -208,7 +177,13 @@
             <state relative-caret-position="340">
               <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
-                <element signature="e#568#569#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#219#220#0" expanded="false" />
+                <element signature="e#259#260#0" expanded="false" />
+                <element signature="e#458#459#0" expanded="false" />
+                <element signature="e#494#495#0" expanded="false" />
+                <element signature="e#615#616#0" expanded="false" />
+                <element signature="e#648#649#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -220,7 +195,8 @@
             <state relative-caret-position="221">
               <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#556#557#0" expanded="false" />
+                <element signature="e#601#602#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -614,7 +590,7 @@
       <recent name="C:\Users\Adrian\workspace\LabMonitor\src\library" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.server">
+  <component name="RunManager" selected="Application.client">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1132,7 +1108,7 @@
       <workItem from="1465228146714" duration="8517000" />
       <workItem from="1465237188646" duration="813000" />
       <workItem from="1465238179166" duration="4852000" />
-      <workItem from="1465320124601" duration="83000" />
+      <workItem from="1465320124601" duration="1324000" />
     </task>
     <task id="LOCAL-00001" summary="Dodany GridPane w SelectedView, oraz tabela procesow">
       <created>1460577392303</created>
@@ -1169,28 +1145,36 @@
       <option name="project" value="LOCAL" />
       <updated>1465239003702</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added jnetpcap">
+      <created>1465320250747</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1465320250747</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59074000" />
+    <option name="totallyTimeSpent" value="60315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43300653" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3137255" sideWeight="0.4969651" order="2" side_tool="false" content_ui="tabs" x="-4" y="511" width="1366" height="209" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3137255" sideWeight="0.4969651" order="2" side_tool="false" content_ui="tabs" x="-4" y="511" width="1366" height="209" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30229008" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30229008" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1208,7 +1192,6 @@
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43300653" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
@@ -1617,29 +1600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/openedPages/client/OpenedPages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-          <folding>
-            <element signature="e#1011#1012#0" expanded="false" />
-            <marker date="1465320059976" expanded="true" signature="36:422" placeholder="..." />
-            <marker date="1465320059976" expanded="true" signature="423:465" placeholder="/**...*/" />
-            <marker date="1465320059976" expanded="false" signature="790:800" placeholder=" { " />
-            <marker date="1465320059976" expanded="true" signature="915:1012" placeholder="{...}" />
-            <marker date="1465320059976" expanded="true" signature="1046:1201" placeholder="{...}" />
-            <marker date="1465320059976" expanded="true" signature="1235:2347" placeholder="{...}" />
-            <marker date="1465320059976" expanded="false" signature="2384:2395" placeholder=" { " />
-            <marker date="1465320059976" expanded="false" signature="2426:2432" placeholder=" }" />
-            <marker date="1465320059976" expanded="true" signature="2512:6336" placeholder="{...}" />
-            <marker date="1465320059976" expanded="true" signature="2522:2769" placeholder="//..." />
-            <marker date="1465320059976" expanded="true" signature="3375:5668" placeholder="{...}" />
-            <marker date="1465320059976" expanded="true" signature="3444:5658" placeholder="{...}" />
-            <marker date="1465320059976" expanded="true" signature="4892:4908" placeholder="//..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/openedPages/client/ClientPagesManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1654,7 +1614,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="38" column="91" selection-start-line="38" selection-start-column="91" selection-end-line="38" selection-end-column="91" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1663,7 +1625,13 @@
         <state relative-caret-position="340">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#568#569#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#219#220#0" expanded="false" />
+            <element signature="e#259#260#0" expanded="false" />
+            <element signature="e#458#459#0" expanded="false" />
+            <element signature="e#494#495#0" expanded="false" />
+            <element signature="e#615#616#0" expanded="false" />
+            <element signature="e#648#649#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1672,7 +1640,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding />
+          <folding>
+            <marker date="1465320060038" expanded="false" signature="36:204" placeholder="..." />
+            <marker date="1465320060038" expanded="true" signature="359:603" placeholder="{...}" />
+            <marker date="1465320060038" expanded="true" signature="684:783" placeholder="{...}" />
+            <marker date="1465320060038" expanded="true" signature="855:985" placeholder="{...}" />
+            <marker date="1465320060038" expanded="true" signature="1028:1415" placeholder="{...}" />
+            <marker date="1465320060038" expanded="true" signature="1450:1683" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1695,8 +1670,8 @@
         <state relative-caret-position="391">
           <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
           <folding>
-            <element signature="e#1112#1113#0" expanded="true" />
-            <element signature="e#1165#1166#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#803#819#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1706,18 +1681,25 @@
         <state relative-caret-position="221">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#556#557#0" expanded="false" />
+            <element signature="e#601#602#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/openedPages/client/OpenedPages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/window_app/selectedView/ViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="161" column="41" selection-start-line="161" selection-start-column="41" selection-end-line="161" selection-end-column="41" />
-          <folding>
-            <element signature="method#setupGridPaneConstraints#0;class#ViewController#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="123" column="51" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
