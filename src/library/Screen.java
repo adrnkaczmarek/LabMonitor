@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 public class Screen {
 
     public static BufferedImage getScreenshot(Dimension dimension) throws AWTException {
-        Rectangle snapShot = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
+        Rectangle snapShot = new Rectangle(new Dimension(1366,768));
 
         BufferedImage buffimg = (new Robot())
                 .createScreenCapture(snapShot);
