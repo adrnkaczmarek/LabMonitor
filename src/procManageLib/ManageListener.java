@@ -40,7 +40,7 @@ public class ManageListener extends Thread{
 
                 try (MulticastSocket clientSocket = new MulticastSocket(port)) {
                     clientSocket.joinGroup(inetAddress);
-                    byte[] buf = new byte[20];
+                    byte[] buf = new byte[25];  //max chyba 21
 
 
                     DatagramPacket discoverPacket = new DatagramPacket(buf, buf.length);
