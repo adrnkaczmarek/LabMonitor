@@ -44,7 +44,7 @@ public class ServerPagesManager {
                     try {
                         OpenedPagesServer server = new OpenedPagesServer();
                         while (true) {
-                            server.Connect(11938);
+                            server.Connect(19938);
                             BufferedReader in = server.GetOpenedPagesStream();
                             String inputLine;
                             while ((inputLine = in.readLine()) != null) {

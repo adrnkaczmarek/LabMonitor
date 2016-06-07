@@ -22,7 +22,7 @@ public class ClientPagesManager {
                 while (true)
                 {
                     try {
-                        OpenedPagesClient client = new OpenedPagesClient(serverIp, 11938);
+                        OpenedPagesClient client = new OpenedPagesClient(serverIp, 19938);
                         while (true) {
                             Thread.sleep(5000);
                             if(captured_pages.length() > captured_pages_last_length) {
