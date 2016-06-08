@@ -152,7 +152,6 @@ public class ViewController implements Initializable, OnAcceptInterface{
         new Thread(new Runnable() {
             @Override
             public void run() {
-                opened_pages_data.add(new Page("test", "test.pl"));
                 ArrayList<String> pages = ServerPagesManager.GetPages(clientIp);
                 for (String p: pages ) {
                     opened_pages_data.add(new Page(clientIp, p));
