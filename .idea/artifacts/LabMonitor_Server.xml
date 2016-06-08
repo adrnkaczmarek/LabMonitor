@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="LabMonitor_Server">
+    <output-path>$PROJECT_DIR$/out/artifacts/LabMonitor_Server</output-path>
+    <root id="archive" name="LabMonitor_Server.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../Meta_server/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="LabMonitor" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/openedPages/jnetpcapLib/jnetpcap.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

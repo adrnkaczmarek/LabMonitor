@@ -7,8 +7,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Bigass layout fix">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/LabMonitor_client/LabMonitor_client.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/LabMonitor_server/LabMonitor_Server.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/client/ClientController$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/client/ClientController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/client/Main$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/client/Main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/client/ScreenViewClient$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/client/ScreenViewClient.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/client/SendScreenTask.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/discoverLib/DiscoverClient.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/discoverLib/DiscoverServer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/library/Conversions.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/library/IOOperations.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/library/Screen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/client/ClientPagesManager$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/client/ClientPagesManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/client/OpenedPages$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/client/OpenedPages.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/client/OpenedPagesClient.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/jnetpcap-pcap100.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/jnetpcap.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/jnetpcap.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/server/ClientPages.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/server/OpenedPagesServer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/server/Page.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/server/ServerPagesManager$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/server/ServerPagesManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/procManageLib/ManageListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/procManageLib/ManageServer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/processLib/ProcessClient.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/processLib/ProcessModel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/processLib/ProcessParse.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/processLib/ProcessServer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/screenLib/OnAcceptInterface.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/screenLib/ScreenView.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/screenLib/ScreenViewServer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/main_view/ChangeImage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/main_view/Main$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/main_view/Main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/main_view/MainController$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/main_view/MainController$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/main_view/MainController$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/main_view/MainController$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/main_view/MainController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/selectedView/ViewController$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/selectedView/ViewController$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/selectedView/ViewController$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/selectedView/ViewController$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/selectedView/ViewController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/selectedView/ViewStage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/selectedView/ViewStage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/client/client_view.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/CHANGE_LOG.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/COPYING" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/COPYING.LESSER" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/RELEASE_NOTES.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/analysis.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/export.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/jnetpcap_bpf.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/jnetpcap_dumper.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/jnetpcap_ids.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/jnetpcap_utils.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/mac_addr.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/nio_jbuffer.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/nio_jmemory.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/packet_flow.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/packet_jscanner.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/packet_protocol.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/util_crc16.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/util_crc32.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/util_debug.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/util_in_cksum.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/winpcap_ext.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/winpcap_ids.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/openedPages/jnetpcapLib/jnetpcap/include/winpcap_stat_ex.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/main_view/server_view.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/LabMonitor/server/window_app/selectedView/selected_view.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/procManageLib/ManageListener.java" afterPath="$PROJECT_DIR$/src/procManageLib/ManageListener.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,12 +146,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ManageListener.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ManageListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/procManageLib/ManageListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
+            <state relative-caret-position="578">
               <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#758#759#0" expanded="false" />
+                <element signature="e#789#790#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,8 +163,54 @@
       <file leaf-file-name="ManageServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/procManageLib/ManageServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="272">
               <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OpenedPagesServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/openedPages/server/OpenedPagesServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerPagesManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/openedPages/server/ServerPagesManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/window_app/selectedView/ViewController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OpenedPages.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/openedPages/client/OpenedPages.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="115" column="34" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -153,11 +280,11 @@
         <option value="$PROJECT_DIR$/src/openedPages/server/OpenedPagesServer.java" />
         <option value="$PROJECT_DIR$/src/server/window_app/main_view/MainController.java" />
         <option value="$PROJECT_DIR$/src/server/window_app/selectedView/ViewStage.java" />
-        <option value="$PROJECT_DIR$/src/server/window_app/selectedView/ViewController.java" />
         <option value="$PROJECT_DIR$/src/openedPages/server/ServerPagesManager.java" />
         <option value="$PROJECT_DIR$/src/openedPages/client/ClientPagesManager.java" />
         <option value="$PROJECT_DIR$/src/procManageLib/ManageServer.java" />
         <option value="$PROJECT_DIR$/src/procManageLib/ManageListener.java" />
+        <option value="$PROJECT_DIR$/src/server/window_app/selectedView/ViewController.java" />
       </list>
     </option>
   </component>
@@ -170,8 +297,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1370" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -184,9 +311,6 @@
     <OptionsSetting value="true" id="Get Latest Version" />
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
-  </component>
-  <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -253,15 +377,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="procManageLib" />
+              <option name="myItemId" value="openedPages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LabMonitor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LabMonitor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openedPages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LabMonitor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LabMonitor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openedPages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -375,6 +543,133 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -389,6 +684,15 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -454,6 +758,9 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -485,6 +792,12 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -541,6 +854,28 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
     <configuration default="false" name="client" type="Application" factoryName="Application">
@@ -639,6 +974,9 @@
       <workItem from="1465237188646" duration="813000" />
       <workItem from="1465238179166" duration="4852000" />
       <workItem from="1465320124601" duration="3763000" />
+      <workItem from="1465326771625" duration="1988000" />
+      <workItem from="1465376517681" duration="2882000" />
+      <workItem from="1465382428641" duration="1896000" />
     </task>
     <task id="LOCAL-00001" summary="Dodany GridPane w SelectedView, oraz tabela procesow">
       <created>1460577392303</created>
@@ -689,34 +1027,39 @@
       <option name="project" value="LOCAL" />
       <updated>1465321550236</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Test deleted&#10;">
+      <created>1465380084393</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1465380084393</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62754000" />
+    <option name="totallyTimeSpent" value="69520000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1370" height="744" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19934641" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39176345" sideWeight="0.4969651" order="2" side_tool="false" content_ui="tabs" x="-4" y="511" width="1366" height="209" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30208334" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29923666" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3137255" sideWeight="0.5030349" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -726,10 +1069,12 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="ConsoleMavenPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3137255" sideWeight="0.5030349" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19934641" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39052287" sideWeight="0.4969651" order="2" side_tool="false" content_ui="tabs" x="-4" y="511" width="1366" height="209" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -756,7 +1101,8 @@
     <MESSAGE value="Dodane zatrzymywanie watkow przy zamykaniu." />
     <MESSAGE value="added jnetpcap" />
     <MESSAGE value="Bigass layout fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bigass layout fix" />
+    <MESSAGE value="Test deleted&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test deleted&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -769,13 +1115,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/server/window_app/selectedView/ViewStage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/screenLib/ScreenView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -982,7 +1321,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1021,16 +1359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#441#442#0" expanded="false" />
-            <element signature="e#478#479#0" expanded="false" />
-            <element signature="e#522#523#0" expanded="false" />
-            <element signature="e#557#558#0" expanded="false" />
-            <element signature="e#588#589#0" expanded="false" />
-            <element signature="e#621#622#0" expanded="false" />
-            <element signature="e#661#662#0" expanded="false" />
-            <element signature="e#692#693#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1112,7 +1440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1121,7 +1448,7 @@
         <state relative-caret-position="340">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1142,37 +1469,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/window_app/selectedView/ViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="123" column="51" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/openedPages/server/OpenedPagesServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/openedPages/server/ServerPagesManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="46" column="48" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/openedPages/client/OpenedPagesClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1180,17 +1480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="24" column="88" selection-start-line="24" selection-start-column="88" selection-end-line="24" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/openedPages/client/OpenedPages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1198,23 +1487,75 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="514">
           <caret line="38" column="91" selection-start-line="38" selection-start-column="91" selection-end-line="38" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/procManageLib/ManageServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="272">
           <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/procManageLib/ManageListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
+        <state relative-caret-position="578">
           <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#758#759#0" expanded="false" />
+            <element signature="e#789#790#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/openedPages/server/OpenedPagesServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/window_app/selectedView/ViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_77/src.zip!/java/net/InetAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="556" column="22" selection-start-line="556" selection-start-column="11" selection-end-line="556" selection-end-column="22" />
+          <folding>
+            <element signature="e#19015#19016#0" expanded="true" />
+            <element signature="e#19055#19056#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/openedPages/client/OpenedPages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="115" column="34" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/openedPages/server/ServerPagesManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
